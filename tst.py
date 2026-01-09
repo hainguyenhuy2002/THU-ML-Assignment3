@@ -267,8 +267,6 @@ def compute_logprobs_from_model(model, input_ids, attention_mask):
     # END TODO 4
     # ========================================================================
 
-    # return logprobs
-
 
 def train_grpo(
     model,
