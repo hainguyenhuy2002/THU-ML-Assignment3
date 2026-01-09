@@ -12,7 +12,6 @@ Make sure you understand the GRPO algorithm before filling in the blanks.
 """
 
 import re
-import sys
 
 import torch
 import torch.nn.functional as F
@@ -381,10 +380,11 @@ def train_grpo(
 
 def main():
     # Configuration
-    if len(sys.argv) < 2:
-        print("Usage: python grpo_homework.py <MODEL_PATH>")
-        sys.exit(1)
-    model_path = sys.argv[1]
+    # if len(sys.argv) < 2:
+    #     print("Usage: python grpo_homework.py <MODEL_PATH>")
+    #     sys.exit(1)
+    model_path = "Qwen/Qwen2.5-1.5B-Instruct"
+
     print(model_path)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     batch_size = 2  # Small batch size for homework
